@@ -1,5 +1,26 @@
+import webbrowser
+import requests
+from requests.exceptions import HTTPError
+
 import pyautogui
 import time
+
+#Declare variables
+link = "https://github.com/"
+chrome_loc = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+webbrowser.register('chrome', None, webbrowser.BackgroundBrowser(chrome_loc))
+
+#Open link
+for url in [link]:
+  try:
+    response = requests.get(url)
+    response.raise_for_status()
+  except HTTPError as http_err:
+    print(f"HTTP error occurred: {http_err}")
+  except Exception as err:
+    print(f"Other error occurred: {err}")
+  else:
+    webbrowser.get('chrome').open_new_tab(link) #open link if no errors
 
 #Beginning actions
 pyautogui.moveTo(1700,200)
