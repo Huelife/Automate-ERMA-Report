@@ -7,7 +7,7 @@ import time
 
 #Declare variables
 link = "https://github.com/"
-chrome_loc = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+chrome_loc = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 webbrowser.register('chrome', None, webbrowser.BackgroundBrowser(chrome_loc))
 
 #Open link
@@ -41,7 +41,7 @@ try:
     target_3 = pyautogui.locateCenterOnScreen("Capture_3.png",confidence=0.85)
     pyautogui.click(target_3)     #Move the mouse to target_3 coordinates and click
 
-    time.sleep(9)          #Sleep for 9 seconds
+    time.sleep(10)          #Sleep for 10 seconds
     target_4 = pyautogui.locateCenterOnScreen("Capture_4.png",confidence=0.85)
     pyautogui.click(target_4)     #Move the mouse to target_4 coordinates and click
 
@@ -52,5 +52,5 @@ except:
     print("ERROR")
 
 #Launch second step to access Tracking Report
-time.sleep(2)          #Sleep for 2 second
+time.sleep(3)          #Sleep for 3 second
 import ERMA_2.py
