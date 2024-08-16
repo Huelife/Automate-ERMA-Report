@@ -33,11 +33,11 @@ try:
     target_1 = pyautogui.locateCenterOnScreen("Capture_1.png",confidence=0.85)
     pyautogui.click(target_1)     #Move the mouse to target_1 coordinates and click
 
-    time.sleep(2)          #Sleep for 2 seconds
+    time.sleep(3)          #Sleep for 3 seconds
     target_2 = pyautogui.locateCenterOnScreen("Capture_2.png",confidence=0.85)
     pyautogui.click(target_2)     #Move the mouse to target_2 coordinates and click
 
-    time.sleep(1)          #Sleep for 1 second
+    time.sleep(2)          #Sleep for 2 second
     target_3 = pyautogui.locateCenterOnScreen("Capture_3.png",confidence=0.85)
     pyautogui.click(target_3)     #Move the mouse to target_3 coordinates and click
 
@@ -45,12 +45,12 @@ try:
     target_4 = pyautogui.locateCenterOnScreen("Capture_4.png",confidence=0.85)
     pyautogui.click(target_4)     #Move the mouse to target_4 coordinates and click
 
-    time.sleep(5)          #Sleep for 5 seconds
+    time.sleep(6)          #Sleep for 6 seconds
     target_5 = pyautogui.locateCenterOnScreen("Capture_5.png",confidence=0.85)
     pyautogui.click(target_5)     #Move the mouse to target_5 coordinates and click       
 except:
     print("ERROR")
 
 #Launch second step to access Tracking Report
-time.sleep(3)          #Sleep for 3 second
+time.sleep(4)          #Sleep for 4 second
 import ERMA_2.py
